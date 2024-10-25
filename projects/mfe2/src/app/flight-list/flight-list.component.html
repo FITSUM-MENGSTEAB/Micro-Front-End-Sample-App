@@ -1,0 +1,27 @@
+<div class="container" *ngIf="!getDetails">
+    <h3 style=" text-align: center; background-color: black; color: aliceblue;">Flight Lists</h3><br>
+    <div *ngFor="let list of data">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Flight No - {{list.id}}</h5>
+                <p class="card-text">{{list.title}}</p>
+                <button (click)="details(list.id)" class="btn btn-primary float-center">Flight Details</button>
+            </div>
+        </div> <br>
+    </div>
+</div>
+
+
+<br><br>
+<div class="container" *ngIf="getDetails">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Flight No : {{currentList[0].id}}</h5>
+                <p class="card-text">UserID :  {{currentList[0].userId}}</p>
+                <p class="card-text">Title Name :  {{currentList[0].title}}</p>
+                <p class="card-text">Title Name :  {{currentList[0].body}}</p>
+                <br><br>
+                <button (click)="backToList()" type="button" class="btn btn-secondary">Back to List</button>
+            </div>
+        </div> <br>
+</div>
