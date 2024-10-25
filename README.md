@@ -1,1 +1,1 @@
-# Micro-Front-End-Sample-App
+# Angular Micro-Front-End-Sample-App
